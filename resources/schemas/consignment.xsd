@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="consignments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="consignment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="consignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="product"/>
+        <xs:element ref="parts"/>
+        <xs:element ref="items"/>
+      </xs:sequence>
+      <xs:attribute name="transport_agreement" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="product" type="xs:string"/>
+  
+  <xs:element name="parts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="consignee"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="consignee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="0"/>
+        <xs:element ref="country"/>
+        <xs:element ref="postcode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="country" type="xs:string"/>
+  <xs:element name="postcode" type="xs:integer"/>
+  
+  <xs:element name="items">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="item"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:attribute name="amount" use="required" type="xs:integer"/>
+      <xs:attribute name="type" use="required" type="xs:string"/>
+      <xs:attribute name="weight" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

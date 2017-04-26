@@ -1,0 +1,34 @@
+{
+    "name": "quicktech/cargonizer",
+    "description": "Wrapper for Logistra Cargonizer API",
+    "authors": [
+        {
+            "name": "Gilberto",
+            "email": "gilberto@quicktech.no"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.4",
+        "guzzlehttp/guzzle": "^6.2",
+        "openlss/lib-array2xml": "^0.5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Quicktech\\Cargonizer\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Quicktech\\CargonizerTest\\": "./test"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --colors=always --coverage-clover clover.xml"
+    }
+}
