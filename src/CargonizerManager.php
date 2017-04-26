@@ -54,7 +54,7 @@ class CargonizerManager
         $xml = Array2XML::createXML('consignments', $params);
         $this->xml = $xml->saveXML();
 
-        $schemaFile = getcwd() . '/resources/schemas/consignment.xsd';
+        $schemaFile = __DIR__ . '/../resources/schemas/consignment.xsd';
         
         try {
             $xmlValidator = new XMLValidator();

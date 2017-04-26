@@ -57,7 +57,7 @@ class XMLValidator
         }
 
         $schemaSource = file_get_contents($schemaFile);
-        $valid = @$dom->schemaValidate($schemaFile);
+        $valid = @$dom->schemaValidateSource($schemaSource);
 
         if (!$valid) {
             $messages = static::getXmlErrors($internalErrors);

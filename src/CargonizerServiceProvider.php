@@ -32,6 +32,8 @@ class CargonizerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/config.php' => app()->basePath() . '/config/cargonizer.php',
         ]);
+
+        $this->mergeConfig();        
     }
 
     /**
@@ -42,7 +44,6 @@ class CargonizerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerCargonizer();
-        $this->mergeConfig();
     }
 
     /**
