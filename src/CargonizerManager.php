@@ -81,9 +81,9 @@ class CargonizerManager
 
         foreach ($consignmentCost as $key => $item) {
             $field = str_replace('-','_', $key);
-            $type = $item['@attributes']['type'];
+            settype($item['@value'], $item['@attributes']['type']);
 
-            $response[$field] = settype($item['@value'], $type);
+            $response[$field] = $item['@value'];
         }
 
         return $response;
