@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "^5.4",
+        "illuminate/support": "^5.2",
         "guzzlehttp/guzzle": "^6.2",
         "openlss/lib-array2xml": "^0.5.1"
     },
