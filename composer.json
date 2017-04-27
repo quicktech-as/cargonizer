@@ -1,6 +1,6 @@
 {
     "name": "quicktech-as/cargonizer",
-    "description": "Wrapper for Logistra Cargonizer API",
+    "description": "Package Laravel for Logistra Cargonizer API",
     "keywords": ["laravel","illuminate","cargonizer"],
     "license": "MIT",
     "authors": [
