@@ -17,7 +17,7 @@ Quicktech\Cargonizer is a succinct and flexible way to use Cargonizer services i
 1) In order to install Laravel 5, just add the following to your composer.json. Then run `composer update`:
 
 ```json
-"quicktech/cargonizer": "@dev-master"
+"quicktech/cargonizer": "^1.0"
 ```
 
 2) Open your `config/app.php` and add the following to the `providers` array:
