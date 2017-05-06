@@ -55,7 +55,7 @@
     <xs:complexType>
       <xs:attribute name="amount" use="required" type="xs:integer"/>
       <xs:attribute name="type" use="required" type="xs:string"/>
-      <xs:attribute name="weight" use="required" type="xs:integer"/>
+      <xs:attribute name="weight" use="required" type="xs:decimal"/>
     </xs:complexType>
   </xs:element>
 

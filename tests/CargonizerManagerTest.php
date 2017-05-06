@@ -38,7 +38,7 @@ class CargonizerManagerTest extends TestCase
             $cargonizer->getXml(),
             '<consignments><consignment transport_agreement="4711"><product>norlines_bil</product>
             <parts><consignee><country>NO</country><postcode>4326</postcode></consignee></parts>
-            <items><item amount="1" type="package" weight="12"/></items></consignment></consignments>'
+            <items><item amount="1" type="package" weight="12.50"/></items></consignment></consignments>'
         );
     }
 
@@ -69,6 +69,9 @@ class CargonizerManagerTest extends TestCase
         $this->assertArrayHasKey('net_amount', $cost);
     }
 
+    /**
+     * @return array
+     */
     private function getParams()
     {
         return [
@@ -88,7 +91,7 @@ class CargonizerManagerTest extends TestCase
                         '@attributes' => [
                             'type' => 'package',
                             'amount' => '1',
-                            'weight' => '12'
+                            'weight' => '12.50'
                         ]
                     ]
                 ]
