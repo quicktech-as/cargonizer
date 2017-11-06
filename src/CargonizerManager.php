@@ -3,6 +3,7 @@
 namespace Quicktech\Cargonizer;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use LSS\Array2XML;
 use LSS\XML2Array;
 use Quicktech\Cargonizer\Exception\ConsignmentCostException;
@@ -64,7 +65,8 @@ class CargonizerManager
             $xmlContent = $response->getBody()->getContents();
 
             return $this->processResponse($xmlContent);
-
+        } catch(\ClientException $e) {
+            return [];
         } catch(\InvalidArgumentException $e) {
             throw new ValidatorException(
                 $e->getMessage()
