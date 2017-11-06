@@ -65,7 +65,7 @@ class CargonizerManager
             $xmlContent = $response->getBody()->getContents();
 
             return $this->processResponse($xmlContent);
-        } catch(\ClientException $e) {
+        } catch(ClientException $e) {
             return [];
         } catch(\InvalidArgumentException $e) {
             throw new ValidatorException(
