@@ -43,7 +43,7 @@ php artisan vendor:publish
 ```php
 CARGONIZER_ENDPOINT = 'http://sandbox.cargonizer.no'
 CARGONIZER_SENDER = 'your send id'
-CARGONIZER_SECRET_KEY = 'your secre key'
+CARGONIZER_SECRET_KEY = 'your secret key'
 ```
 
 ## Configuration
